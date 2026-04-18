@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy: #0F172A;
+  --color-slate-800: #1E293B;
+  --color-silver: #CBD5E1;
+  --color-electric-blue: #38BDF8;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-text-dim: #94A3B8;
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-slate-50 font-sans antialiased;
+    background-image: radial-gradient(circle at 80% 20%, #1e3a8a 0%, transparent 40%),
+                      radial-gradient(circle at 20% 80%, #0c4a6e 0%, transparent 40%);
+    background-color: #0F172A;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-glass backdrop-blur-md border border-glass-border rounded-2xl shadow-xl;
+  }
+
+  .hero-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-silver;
+  }
+
+  .status-badge {
+    @apply bg-sky-500/10 border border-electric-blue/50 px-3 py-1 rounded-full text-[10px] uppercase tracking-widest flex items-center gap-2 font-semibold text-electric-blue;
+  }
+
+  .chrome-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-silver;
+  }
+}
+
+.neon-blue-glow {
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-700;
+}

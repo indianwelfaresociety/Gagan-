@@ -1,0 +1,8 @@
+{
+  "name": "G-Alexa",
+  "description": "The Future of AI Assistant - Smart Thinking, Smarter Living. A powerful AI partner for life and business with global knowledge, image generation, and voice intelligence.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}
